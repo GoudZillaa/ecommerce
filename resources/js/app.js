@@ -6,15 +6,15 @@
 
 //css
 import '../css/app.css';
-import '../css/bootstrap.min.css';
-import '../css/fontawesome-pro.css';
-import '../css/animate.css';
-import '../css/slick.css';
-import '../css/swiper.min.css';
-import '../css/magnific-popup.css';
-import '../css/meanmenu.min.css';
-import '../css/spacing.css';
-import '../css/main.css';
+import '../../public/assets/css/bootstrap.min.css';
+import '../../public/assets/css/fontawesome-pro.css';
+import '../../public/assets/css/animate.css';
+import '../../public/assets/css/slick.css';
+import '../../public/assets/css/swiper.min.css';
+import '../../public/assets/css/magnific-popup.css';
+import '../../public/assets/css/meanmenu.min.css';
+import '../../public/assets/css/spacing.css';
+import '../../public/assets/css/main.css';
 
 // Import jQuery first, as it's a dependency for many other scripts
 // Import Swiper core and its dependencies.
@@ -23,7 +23,7 @@ import 'swiper/bundle';
 
 // Import your custom main.js file, which contains your Swiper initializations.
 // This must be loaded after Swiper.
-import './main.js';
+// import './main.js';
 
 
 import 'wowjs/dist/wow.js';
@@ -34,7 +34,7 @@ import 'wowjs/dist/wow.js';
 // You can uncomment and add more as needed.
 // Vite will automatically find and bundle these from your `node_modules` folder.
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './bootstrap.bundle.min.js';
+// import './bootstrap.bundle.min.js';
 // import './wow.js';
 // import './beforeafter.jquery-1.0.0.min.js';
 // import './ajax-form.js';

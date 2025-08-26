@@ -3,10 +3,15 @@
 <head>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- FontAwesome for icons -->
+    
+    
     <!-- Frameworks -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-pro.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- Plugins -->
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
@@ -35,6 +40,7 @@
 
     @include('partials.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script> -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/wow.js') }}"></script>
@@ -80,8 +86,82 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    const testimonialSwiper = document.querySelector('.testimonial-active');
+    if (testimonialSwiper && testimonialSwiper.swiper) {
+        testimonialSwiper.swiper.destroy(true, true);
+    }
+     var team = new Swiper(".testimonial-active", {
+		slidesPerView:3,
+		spaceBetween: 30,
+		loop: true,
+		roundLengths: true,
+		autoplay: {
+			delay: 3000,
+		},
+		pagination: {
+			el: ".bd-swiper-dot",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".testimonial-button-next",
+			prevEl: ".testimonial-button-prev",
+		},
+		breakpoints: {
+			1400: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			0: {
+				slidesPerView: 1,
+			},
+		},
+        on: {
+            init: function () {
+                console.log('Swiper initialized successfully');
+            }
+        }
+	});
 });
+
 </script>
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 2,
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                }
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.testi-arrow-btn:last-child',
+                prevEl: '.testi-arrow-btn:first-child',
+            },
+        });
+    });
+</script> -->
 
 </body>
 </html>

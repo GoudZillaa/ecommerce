@@ -7,5 +7,12 @@
     @include('partials.services')
     @include('partials.furnitureOffers')
     @include('partials.featuredProducts')
-    <!-- @include('partials.test') -->
+    @include('partials.furnitureRating')
+    @include('partials.furnitureTrendy')
+    @include('partials.furnitureAd')
+    @include('partials.furnitureTestimonials')
+    @include('partials.bestSeller')
+    @include('partials.blogSection')
+    @include('partials.supportSection')
+    @include('partials.brandArea')
 @endsection
